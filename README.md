@@ -29,6 +29,14 @@ python server/upload_server.py
 1. 使用 HBuilderX 或其他支持 `uni-app` 的环境打开本项目；
 2. 根据目标平台进行编译或运行（如微信小程序、H5 等）。
 
+## 相关论文
+
+基于本项目的研究成果：
+
+- *The Immersive Art Therapy Driven by AIGC: An Innovative Approach to Alleviating Children's Nyctophobia*  
+  Authors: Jinlin Miao, Zhiyuan Zhou, Yilei Wu, Fenggui Rao*, Fanjing Meng*  
+  *:共同通讯作者
+
 ## 许可证
 
 本项目遵循 MIT License。
