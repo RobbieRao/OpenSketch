@@ -1,0 +1,22 @@
+{
+  "pages": [
+    "pages/draw/start",
+    "pages/draw/draw",
+    "pages/draw/card",
+    "pages/draw/other",
+    "pages/draw/shanhu",
+    "pages/draw/zhangyv",
+    "pages/draw/youyongquan",
+    "pages/draw/weizhi",
+    "pages/english/start",
+    "pages/english/draw",
+    "pages/english/card"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "usingComponents": {}
+}

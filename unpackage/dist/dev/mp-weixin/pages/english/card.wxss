@@ -1,0 +1,108 @@
+
+.number {
+    font-family: 'hh';
+}
+.content {
+    z-index: 900;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bolder;
+}
+.header {
+    font-weight: bolder;
+    font-family: 'hh';
+}
+.image-upload-button {
+    width: 100rpx;
+    height: 100rpx;
+    line-height: 80rpx;
+    padding: 0 30rpx;
+    font-size: 28rpx;
+    background-color: #3FE2EB;
+    color: #000;
+    border: none;
+    text-align: center;
+    border: 1.5px solid #000;
+    /* Add black solid border */
+    border-radius: 50px;
+    /* Remove border radius */
+}
+.image-upload-button:active {
+    background-color: #D2396A;
+    color: white;
+    border: 1px solid #000;
+    /* Add black solid border */
+    border-radius: 50;
+    /* Remove border radius */
+}
+.image-area {
+    margin: 20rpx;
+    width: 94.5vw;
+    height: 94.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.doCanvas {
+    display: flex;
+    justify-content: space-between;
+    margin: 10rpx;
+}
+.uploaded-image {
+    width: 512rpx;
+    height: 512rpx;
+}
+.canvas-element {
+    width: 100%;
+    height: 100%;
+    background-color: #f1f1f1;
+}
+.background {
+    width: 617rpx;
+    height: 616rpx;
+    background-image: linear-gradient(rgba(255, 41, 116, 1.0) 1px, transparent 1.5px),
+      linear-gradient(90deg, rgba(255, 65, 157, 1.0) 1px, transparent 1.5px);
+    background-size: 62rpx 62rpx;
+}
+.Slider {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    right: 10rpx;
+    width: 400rpx;
+    height: 100rpx;
+    background-color: #ffffff;
+    /* 设置滑条轨道的背景色 */
+    border: 1px solid #000000;
+    /* 设置滑条轨道的边框 */
+    border-radius: 50px;
+    /* 设置滑条轨道的圆角 */
+}
+
+  /* 分享按钮 */
+.share {
+    position: absolute;
+    top: 1250rpx;
+    left: 60rpx;
+}
+.back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff4f4;
+}
+.background0 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: radial-gradient(circle, #ffffff 13rpx, transparent 1rpx);
+    background-size: 25rpx 25rpx;
+}
