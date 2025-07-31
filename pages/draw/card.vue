@@ -273,20 +273,19 @@
       onTouchStart(event) {
         this.touchStartX = event.changedTouches[0].pageX; // 记录触摸起始位置
       },
-      onTouchMove(event) {
-        const touchX = event.changedTouches[0].pageX; // 当前触摸位置
-        const distance = touchX - this.touchStartX; // 计算触摸移动距离
-        // 限制平移距离在最大平移距离范围内
-        this.buttonTranslateX = Math.max(0, Math.min(distance, this.maxTranslateX));
-        const maxTranslateX = 175; // 最大平移距离
-        if (!this.hasReachedMaxPosition && Math.abs(distance) >= maxTranslateX) {
-          this.hasReachedMaxPosition = true; // 设置已经达到最大位置的标记
-          this.onUploadscreen(); // 执行 onUploadscreen() 函数
-        }
-        if (this.hasReachedMaxPosition) {
-          this.buttonTranslateX = 0; // 重置按钮的平移距离为零
-        }
-      },
+        onTouchMove(event) {
+          const touchX = event.changedTouches[0].pageX; // 当前触摸位置
+          const distance = touchX - this.touchStartX; // 计算触摸移动距离
+          // 限制平移距离在最大平移距离范围内
+          this.buttonTranslateX = Math.max(0, Math.min(distance, this.maxTranslateX));
+          if (!this.hasReachedMaxPosition && Math.abs(distance) >= this.maxTranslateX) {
+            this.hasReachedMaxPosition = true; // 设置已经达到最大位置的标记
+            this.onUploadscreen(); // 执行 onUploadscreen() 函数
+          }
+          if (this.hasReachedMaxPosition) {
+            this.buttonTranslateX = 0; // 重置按钮的平移距离为零
+          }
+        },
       onTouchEnd() {
         if (this.hasReachedMaxPosition) {
           this.buttonTranslateX = 0; // 重置按钮的平移距离为零
@@ -326,10 +325,12 @@
         }, 3000);
       },
 
-      onUploadscreen() {
-        this.upLoadWaiting();
-        this.uploadCount--; // 增加调用次数计数
-        const url = 'https://x5334j0832.goho.co/upload_image'; // 替换为你要上传图片的服务器地址
+        onUploadscreen() {
+          if (this.uploadCount > 0) {
+            this.uploadCount--; // 增加调用次数计数
+          }
+          this.upLoadWaiting();
+          const url = 'https://x5334j0832.goho.co/upload_image'; // 替换为你要上传图片的服务器地址
 
         const imageData = {
           image: this.generatedImage.split(',')[1] // 获取生成的图片的Base64数据部分
@@ -349,13 +350,13 @@
             // 处理失败响应的逻辑
           }
         });
-        if (this.uploadCount === 0) {
-          // 禁用函数
-          this.onUploadscreen = () => {
-            console.log('函数被禁用');
-          };
+          if (this.uploadCount === 0) {
+            // 禁用函数
+            this.onUploadscreen = () => {
+              console.log('函数被禁用');
+            };
+          }
         }
-      }
 
 
     }
