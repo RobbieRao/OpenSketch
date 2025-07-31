@@ -33,7 +33,7 @@ python server/upload_server.py
 
 基于本项目的研究成果：
 
-- *The Immersive Art Therapy Driven by AIGC: An Innovative Approach to Alleviating Children's Nyctophobia*  
+- *(CHI2025)The Immersive Art Therapy Driven by AIGC: An Innovative Approach to Alleviating Children's Nyctophobia*  
   Authors: Jinlin Miao, Zhiyuan Zhou, Yilei Wu, Fenggui Rao*, Fanjing Meng*  
   *:共同通讯作者
 
