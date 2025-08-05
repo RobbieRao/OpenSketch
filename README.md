@@ -9,6 +9,28 @@ OpenSketch 是一个基于 [uni-app](https://uniapp.dcloud.io/) 的模板工程�
 - 内置 [uView](https://www.uviewui.com/) 组件库构建界面；
 - 提供上传服务器示例，便于二次开发。
 
+## 快速开始
+
+1. **安装依赖**
+   - [Python 3](https://www.python.org/)；
+   - `pip install flask` 安装上传服务器所需的依赖；
+   - [HBuilderX](https://www.dcloud.io/hbuilderx.html) 或其他支持 `uni-app` 的开发工具。
+
+2. **配置 AIGC 后端**
+   - 修改 `utils/api-config.js` 中的 `sdTxt2Img`、`sdImg2Img` 等地址为你自己的 Stable Diffusion WebUI 或 ComfyUI 服务端点。
+
+3. **启动上传服务器**
+
+   ```bash
+   python server/upload_server.py
+   ```
+
+   服务器默认监听 `5000` 端口，上传的文件会保存到 `server/uploads/` 目录。
+
+4. **运行前端**
+   - 使用 HBuilderX 打开项目并根据目标平台（H5、微信小程序等）编译运行；
+   - 将画板中的内容发送给后端生成新图像。
+
 ## 服务说明
 
 - **AIGC 接口**：默认对接 Stable Diffusion WebUI，端口和地址可在 `utils/api-config.js` 中修改，也可替换为 ComfyUI 等其它服务；

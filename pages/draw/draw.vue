@@ -485,7 +485,6 @@
           negative_prompt: '(worst quality,low quality,bad quality),',
           enable_hr: "false",
           seed: -1,
-          sampler_name: 'Euler a',
           batch_size: 1,
           steps: 20,
           quick_steps: 12,
@@ -496,7 +495,6 @@
           hr_second_pass_steps: 9,
           hr_scale: 1.0,
           hr_upscaler: 'Latent (bicubic)',
-          denoising_strength: 0.6,
           denoising_strength: 0.6,
           sampler_name: 'DPM++ 2M Karras',
 
@@ -549,7 +547,6 @@
           negative_prompt: '(worst quality,low quality,bad quality，extra border),',
           enable_hr: "false",
           seed: -1,
-          sampler_name: 'Euler a',
           batch_size: 1,
           steps: 30,
           quick_steps: 12,
