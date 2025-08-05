@@ -83,6 +83,7 @@
 </template>
 
 <script>
+  import apiConfig from '../../utils/api-config.js'
   const url = 'https://www.zebbagreen.cn/FZLTSJW.TTF'
 
 
@@ -98,6 +99,8 @@
         uploadedImage: null,
         generatedImage: null,
         base64Image: '',
+        // current backend, see utils/api-config.js
+        backend: apiConfig.backend,
 
         //手指动画的参数
         imageSrc: 'https://www.zebbagreen.cn/static/手指.svg',
@@ -475,7 +478,7 @@
 
       // Method to send the converted image
       sendImage() {
-        const url = 'https://gt29495501.yicp.fun/sdapi/v1/txt2img'; // Replace with your server address
+        const url = apiConfig.sdTxt2Img; // configurable endpoint
 
         const params = {
           prompt: 'A flat image of ip, logo or a symbol, it is' + this.prompt,
@@ -537,7 +540,7 @@
       },
 
       sendImage2() {
-        const url = 'https://gt29495501.yicp.fun/sdapi/v1/img2img'; // Replace with your server address
+        const url = apiConfig.sdImg2Img; // configurable endpoint
 
         const params = {
           init_images: [this.base64Image],
