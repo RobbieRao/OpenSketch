@@ -1,18 +1,17 @@
-# SwimWorld
+# OpenSketch
 
-SwimWorld 是一个基于 [uni-app](https://uniapp.dcloud.io/) 的小程序，
-用于与 Stable Diffusion 接口交互生成“泳动小精灵”图像。用户可以
-输入文本并通过滑动手势上传生成的图像进行分享。
+OpenSketch 是一个基于 [uni-app](https://uniapp.dcloud.io/) 的模板工程，支持在移动端或小程序端的画板上涂鸦，并将图像发送到可配置的 AIGC 后端（如 Stable Diffusion WebUI、ComfyUI 等）进行生成。项目同时附带一个简易的上传服务器，用于接收并保存生成的图片。
 
 ## 功能特点
 
-- 通过 AI 生成自定义的泳动小精灵图像；
-- 支持滑动触发上传，显示剩余上传次数；
-- 内置 [uView](https://www.uviewui.com/) 组件库以构建界面。
+- 画板涂鸦并调用 AI 生成图像；
+- API 端点可在 `utils/api-config.js` 中配置，以便对接不同的模型或服务；
+- 内置 [uView](https://www.uviewui.com/) 组件库构建界面；
+- 提供上传服务器示例，便于二次开发。
 
 ## 服务说明
 
-- **Stable Diffusion 接口**：依赖 SD WebUI，默认提供 `7860` 端口的 HTTP API。
+- **AIGC 接口**：默认对接 Stable Diffusion WebUI，端口和地址可在 `utils/api-config.js` 中修改，也可替换为 ComfyUI 等其它服务；
 - **上传服务器**：`server/upload_server.py` 使用 [Flask](https://flask.palletsprojects.com/) 接收图片，默认监听 `5000` 端口，并将文件保存到 `server/uploads/` 目录。
 
 ### 启动上传服务器
@@ -29,13 +28,9 @@ python server/upload_server.py
 1. 使用 HBuilderX 或其他支持 `uni-app` 的环境打开本项目；
 2. 根据目标平台进行编译或运行（如微信小程序、H5 等）。
 
-## 相关论文
+## 开发
 
-基于本项目的研究成果：
-
-- *(CHI2025) The Immersive Art Therapy Driven by AIGC: An Innovative Approach to Alleviating Children's Nyctophobia*  
-  Authors: Jinlin Miao, Zhiyuan Zhou, Yilei Wu, Fenggui Rao*, Fanjing Meng*  
-  *:共同通讯作者
+项目的结构、接口切换和二次开发说明见 [DEVELOPMENT.md](DEVELOPMENT.md)。
 
 ## 许可证
 
