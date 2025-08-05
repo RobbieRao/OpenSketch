@@ -32,6 +32,14 @@ python server/upload_server.py
 
 项目的结构、接口切换和二次开发说明见 [DEVELOPMENT.md](DEVELOPMENT.md)。
 
+## 相关论文
+
+基于本项目开发的研究成果：
+
+- *(CHI2025) The Immersive Art Therapy Driven by AIGC: An Innovative Approach to Alleviating Children's Nyctophobia*  
+  Authors: Jinlin Miao, Zhiyuan Zhou, Yilei Wu, Fenggui Rao*, Fanjing Meng*  
+  *:共同通讯作者
+
 ## 许可证
 
 本项目遵循 MIT License。
